@@ -1,0 +1,289 @@
+
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<h6>Welcome... {{user.username}}</h6>
+
+<center><h2><div class="shadow p-2 mb-4 bg-white rounded">ONLINE CRIME REPORTING SYSTEM</div></h2></center>
+<nav class="navbar navbar-expand-lg navbar navbar-light " style="background-color: #6CFA68;">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Wanted Criminals</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="">Contact</a>
+          </li>
+        
+        
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <center><p><i>register your complaint given below....</i></p></center>
+<center>
+<div class="container">
+  <form action="" id="Reports" method="POST">
+    {% csrf_token %}
+  <table>
+      <tr>
+        <th>Name :</th>
+        <td>
+          <input type="text" name="name" id="name" placeholder="name">
+        </td>
+
+      </tr>
+      
+      <tr>
+        <th>Mobile No :</th>
+        <td>
+          <input type="text" name="mobile" id="mobile" placeholder="mobile">
+        </td>
+
+      </tr>
+      <tr>
+        <th>Email :</th>
+        <td>
+          <input type="email" name="email" id="email" placeholder="email">
+        </td>
+
+      </tr>
+      <tr>
+        <th>Dob :</th>
+        <td>
+          <input type="date" name="dob" id="dob" placeholder="dob">
+        </td>
+
+      </tr>
+      <tr>
+        <th>Gender :</th>
+        <td>
+          <input type="radio" name="gender" id="gender" value="Male">Male
+          <input type="radio" name="gender" id="gender" value="Male">Female
+          <input type="radio" name="gender" id="gender" value="others">others
+        </td>
+
+      </tr>
+      <tr>
+        <th>Age :</th>
+        <td>
+          <select name="age" id="age">
+            <option value="0" selected disabled>Select Age</option>
+            <option value="01">1</option>
+            <option value="02">2</option>
+            <option value="03">3</option>
+            <option value="04">4</option>
+            <option value="05">5</option>
+            <option value="06">6</option>
+            <option value="07">7</option>
+            <option value="08">8</option>
+            <option value="09">9</option>
+            <option value="010">10</option>
+            <option value="011">11</option>
+            <option value="012">12</option>
+            <option value="013">13</option>
+            <option value="014">14</option>
+            <option value="015">15</option>
+            <option value="016">16</option>
+            <option value="017">17</option>
+            <option value="018">18</option>
+            <option value="019">19</option>
+            <option value="020">20</option>
+            <option value="021">21</option>
+            <option value="022">22</option>
+            <option value="023">23</option>
+            <option value="024">24</option>
+            <option value="025">25</option>
+            <option value="026">26</option>
+            <option value="027">27</option>
+            <option value="028">28</option>
+            <option value="029">29</option>
+            <option value="030">30</option>
+            <option value="031">31</option>
+            <option value="032">32</option>
+            <option value="033">33</option>
+            <option value="034">34</option>
+            <option value="035">35</option>
+            <option value="036">36</option>
+            <option value="037">37</option>
+            <option value="038">38</option>
+            <option value="039">39</option>
+            <option value="040">40</option>
+            <option value="041">41</option>
+            <option value="042">42</option>
+            <option value="043">43</option>
+            <option value="044">44</option>
+            <option value="045">45</option>
+            <option value="046">46</option>
+            <option value="047">47</option>
+            <option value="048">48</option>
+            <option value="049">49</option>
+            <option value="050">50</option>
+            <option value="051">51</option>
+            <option value="052">52</option>
+            <option value="053">53</option>
+            <option value="054">54</option>
+            <option value="055">55</option>
+            <option value="056">56</option>
+            <option value="057">57</option>
+            <option value="058">58</option>
+            <option value="059">59</option>
+            <option value="060">60</option>
+            <option value="061">61</option>
+            <option value="062">62</option>
+            <option value="063">63</option>
+            <option value="064">64</option>
+            <option value="065">65</option>
+            <option value="066">66</option>
+            <option value="067">67</option>
+            <option value="068">68</option>
+            <option value="069">69</option>
+            <option value="070">70</option>
+            <option value="071">71</option>
+            <option value="072">72</option>
+            <option value="073">73</option>
+            <option value="074">74</option>
+            <option value="075">75</option>
+            <option value="076">76</option>
+            <option value="077">77</option>
+            <option value="078">78</option>
+            <option value="079">79</option>
+            <option value="080">80</option>
+          </select>
+        </td>
+
+      </tr>
+      <tr>
+        <th>Crime Type :</th>
+        <td>
+          <select name="crimetype" id="crimetype">
+            <option value="0" selected disabled>choose any  </option>
+            <option value="cs">chain snaching</option>
+            <option value="rby">robbery</option>
+<option value="dwy">dowry</option>
+<option value="dv">domestic violence</option>
+<option value="da">drug abuse</option>
+<option value="dv">domestic violence</option>
+<option value="ca">childhood abuse</option>
+<option value="rp">revenge  porn</option>
+<option value="vc">violent crime</option>
+<option value="asn">arson</option>
+<option value="bgy">burglary</option>
+<option value="cc">cyber crime</option>
+<option value="sh">sexual harrasment</option>
+								
+
+          </select>
+        </td>
+
+      </tr>
+      <tr>
+        <th>Describe Crime :</th>
+        <td>
+          <textarea rows="4" cols="38" name="describecrime" id="name" placeholder="Describe Crime "></textarea>
+        </td>
+
+      </tr>
+      <tr>
+        <th>Crime Location :</th>
+        <td>
+          <select name="crimelocation" id="crimelocation">
+          <option value="0" selected disabled>Choose the location</option>
+          <option value="cdm">Chidambaram</option>
+          <option value="cdl">Cuddallore</option>
+          <option value="bvg">Bhuvanagiri</option>
+          <option value="prgi">Parangipettai</option>
+          <option value="kjpd">Kurinjipadi</option>
+        </select>
+        </td>
+
+      </tr>
+      <tr>
+          <th>Your Address :</th>
+          <td>
+            <textarea rows="4" cols="38" name="youraddress" id="youraddress" placeholder="Describe Crime "></textarea>
+          </td>
+  
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Register</button>
+            </td>
+    
+          </tr>
+
+
+
+
+
+
+  </table>
+  </form>
+</div>
+
+
+  
+  
+
+{% endblock %}
+
+{% block scripts %}
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+            $(document).on('submit','#Reports',function(e){
+                  e.preventDefault();
+                  //alert('welcome');
+                  $.ajax({
+                        type : 'POST',
+                        url  : 'ajaxRegister',
+                        data : {
+                              name                    : $('#name').val(),
+                              mobile                  : $('#mobile').val(),
+                              email                   : $('#email').val(),
+                              dob                     : $('#dob').val(),
+                              gender                  : $('#gender').val(),
+                              age                     : $('#age').val(),
+                              crimetype               : $('#crimetype').val(),
+                              describecrime           : $('#descrimecrime').val(),
+                              crimelocation           : $('#crimelocation').val(),
+                              youraddress             : $('#youraddress').val(),
+                              csrfmiddlewaretoken     : $('input[name=csrfmiddlewaretoken]').val(),
+                        },success:function(){
+                              alert('Register Successfully.');
+                              //location.reload();
+                              $('Reports')[0].reset();
+                        }
+                  });
+
+
+            });
+      });
+</script>
+
+
+
+{% endblock %}
+
+
+

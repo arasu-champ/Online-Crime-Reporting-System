@@ -1,0 +1,16 @@
+{% extends 'index.html'%}
+
+
+
+{% block content %}
+<div class="container">
+<h1 class="display-6"> Create a new account </h1>
+<hr>
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>Register</button>
+</form>
+</div>
+
+{% endblock %}
